@@ -8,3 +8,20 @@ function menuFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+//Used to open car categories on CAR HIRE page
+function openCategory(event, categoryName) {
+  var i;
+  var x = document.getElementsByClassName("category");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  categoryLinks = document.getElementsByClassName("categoryBtn");
+  for (i = 0; i < categoryLinks.length; i++) {
+    categoryLinks[i].className = categoryLinks[i].className.replace(" w3-red", "");
+  }
+
+  document.getElementById(categoryName).style.display = "block";
+  event.currentTarget.className += " w3-red";
+}
