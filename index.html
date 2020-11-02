@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
-    <title>Car Rental AS</title>
+    <title>Home - Car Rental AS</title>
 </head>
 <body>
 
     <!-- Header -->
-    <div class="w3-container w3-black w3-top">
+    <div class="w3-container w3-black">
 
         <!-- Top bar-->
         <div class="w3-container">
@@ -20,7 +21,7 @@
             </a>
         </div>
         <!-- <div class="w3-top"> -->
-        <div class="w3-bar w3-black w3-card">
+        <div class="w3-black w3-card">
             <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="menuFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
             <a href="carhire.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CAR HIRE</a>
@@ -45,6 +46,48 @@
         </div>
     </div>
 
+    <!-- Content -->
+    <div class="w3-container w3-content w3-margin">
+
+        <form action="findcar.html">
+            <div class="w3-container" style="margin-bottom: 15px;">
+                <label for="location">Choose a pickup and delivery location</label>
+                <select class="w3-select" name="location" id="location">
+                    <option value="" disabled selected>Location</option>
+                    <option value="1">Bergen - Flesland</option>
+                    <option value="2">Sogndal - Amfi</option>
+                    <option value="3">Home at Jon's place</option>
+                </select>
+            </div>
+            <div class="w3-container" style="margin-bottom: 15px;">
+                <label for="pickup">Pickup date:</label>
+                <input type="date" id="pickup" name="pickup-date">
+                <label for="pickup-time">Time:</label>
+                <input type="time" name="pickup-time" id="pickup-time">
+            </div> 
+            <div class="w3-container">
+                <label for="deliver">Deliver date:</label>
+                <input type="date" id="deliver" name="deliver-date">
+                <label for="deliver-time">Time:</label>
+                <input type="time" name="deliver-time" id="deliver-time"> 
+                    
+            </div>
+            <div class="w3-container">
+                <select class="w3-select" name="car-catergory" id="car-catergory">
+                    <option value="" disabled selected>Car category</option>
+                    <option value="1">Category A</option>
+                    <option value="2">Category B</option>
+                    <option value="3">Category C</option>
+                    <option value="4">Category D</option>
+                    <option value="5">Category V</option>
+                </select>
+            </div>
+            <div class="w3-container w3-margin">
+                <button type="submit">Find car</button>
+            </div>
+        </form>
+    </div>
+
     <!-- Footer-->
     <div class="w3-bar w3-black w3-bottom">
         <div class="w3-cell-row">
@@ -60,10 +103,5 @@
         </div>
     </div>
 
-    
-      
-    
-      
-    
 </body>
 </html>
