@@ -50,55 +50,65 @@
     <div class="w3-container w3-content w3-margin">
 
         <form action="findcar.html">
-            <div class="w3-container" style="margin-bottom: 15px;">
-                <label for="location">Choose a pickup and delivery location</label>
-                <select class="w3-select" name="location" id="location">
-                    <option value="" disabled selected>Location</option>
-                    <option value="1">Bergen - Flesland</option>
-                    <option value="2">Sogndal - Amfi</option>
-                    <option value="3">Home at Jon's place</option>
-                </select>
-            </div>
-            <div class="w3-container" style="margin-bottom: 15px;">
-                <label for="pickup">Pickup date:</label>
-                <input type="date" id="pickup" name="pickup-date">
-                <label for="pickup-time">Time:</label>
-                <input type="time" name="pickup-time" id="pickup-time">
-            </div> 
-            <div class="w3-container">
-                <label for="deliver">Deliver date:</label>
-                <input type="date" id="deliver" name="deliver-date">
-                <label for="deliver-time">Time:</label>
-                <input type="time" name="deliver-time" id="deliver-time"> 
-                    
-            </div>
-            <div class="w3-container">
-                <select class="w3-select" name="car-catergory" id="car-catergory">
-                    <option value="" disabled selected>Car category</option>
-                    <option value="1">Category A</option>
-                    <option value="2">Category B</option>
-                    <option value="3">Category C</option>
-                    <option value="4">Category D</option>
-                    <option value="5">Category V</option>
-                </select>
-            </div>
-            <div class="w3-container w3-margin">
-                <button type="submit">Find car</button>
-            </div>
+            <fieldset>
+                <legend>Book a car:</legend>
+                <div class="w3-container" style="margin-bottom: 15px;">
+                    <label for="location">* Choose a pickup and delivery location</label>
+                    <select class="w3-select" name="location" id="location" required oninvalid="this.setCustomValidity('Please choose a valid pickup and delivery location')" oninput="this.setCustomValidity('')">
+                        <option value="" disabled selected>Location</option>
+                        <option value="1">Bergen - Flesland</option>
+                        <option value="2">Sogndal - Amfi</option>
+                        <option value="3">Home at Jon's place</option>
+                    </select>
+                </div>
+                <div class="w3-container" style="margin-bottom: 15px;">
+                    <label for="pickup">* Pickup date:</label>
+                    <input type="date" id="pickup" name="pickup-date" required oninvalid="this.setCustomValidity('Please enter a valid pickup date')" oninput="this.setCustomValidity('')">
+                    <label for="pickup-time">* Time:</label>
+                    <input type="time" name="pickup-time" id="pickup-time" required oninvalid="this.setCustomValidity('Please enter a valid pickup time')" oninput="this.setCustomValidity('')">
+                </div> 
+                <div class="w3-container">
+                    <label for="deliver">* Deliver date:</label>
+                    <input type="date" id="deliver" name="deliver-date" required oninvalid="this.setCustomValidity('Please enter a valid deliver date')" oninput="this.setCustomValidity('')">
+                    <label for="deliver-time">* Time:</label>
+                    <input type="time" name="deliver-time" id="deliver-time" required oninvalid="this.setCustomValidity('Please enter a valid deliver time')" oninput="this.setCustomValidity('')"> 
+                        
+                </div>
+                <div class="w3-container">
+                    <select class="w3-select" name="car-catergory" id="car-catergory">
+                        <option value="" disabled selected>Car category</option>
+                        <option value="1">Category A</option>
+                        <option value="2">Category B</option>
+                        <option value="3">Category C</option>
+                        <option value="4">Category D</option>
+                        <option value="5">Category V</option>
+                    </select>
+                </div>
+                <div class="w3-container w3-margin">
+                    <button type="submit">Find car</button>
+                </div>
+                <span style="color: red">* - Fields marked with * is madatory</span>
+            </fieldset>
         </form>
     </div>
+
 
     <!-- Footer-->
     <div class="w3-bar w3-black w3-bottom">
         <div class="w3-cell-row">
             <div class="w3-container w3-cell w3-mobile">
-                Test cell
+                <a href="underconstruction.html">Most popular cars</a><br>
+                <a href="underconstruction.html">Top Locations</a>
             </div>
             <div class="w3-container w3-cell w3-mobile">
-                Test cell
+                <a href="underconstruction.html">Contact information</a><br>
+                <a href="underconstruction.html">About us / FAQ</a><br>
+                <a href="underconstruction.html">Press room</a>
             </div>
             <div class="w3-container w3-cell w3-mobile">
-                Test cell
+                <a href="underconstruction.html">Privacy policy</a><br>
+                <a href="underconstruction.html">Terms of service</a><br>
+                <a href="underconstruction.html">Become a Hertz employee</a>
             </div>
         </div>
     </div>
