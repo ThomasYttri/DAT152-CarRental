@@ -56,3 +56,8 @@ footer {
     margin-right: 0px;
     margin-right: 10px;
 }
+
+.red-hover {
+    background-color: rgb(128,0,0);
+    color: white;
+}

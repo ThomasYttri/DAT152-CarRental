@@ -19,9 +19,9 @@ function openCategory(event, categoryName) {
 
   categoryLinks = document.getElementsByClassName("categoryBtn");
   for (i = 0; i < categoryLinks.length; i++) {
-    categoryLinks[i].className = categoryLinks[i].className.replace(" w3-red", "");
+    categoryLinks[i].className = categoryLinks[i].className.replace(" red-hover", "");
   }
 
   document.getElementById(categoryName).style.display = "block";
-  event.currentTarget.className += " w3-red";
+  event.currentTarget.className += " red-hover";
 }
